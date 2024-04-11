@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Add Icon Link -->
+        <link rel="icon" href="asserts/images/burger5.png" type="image/x-icon">
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Crud-Operations</title>
+    </head>
+
+    <body>
+        <div class="dashboard">
+            <aside>
+                <h1>CRUD OPERATIONS</h1>
+                <div class="logo">
+                    <div class="img"></div>
+                    <h2>Karthi Madesh</h2>
+                    <small>Admin</small>
+                </div>
+                <ul>
+                    <div>
+                        <li class="active-link">
+                            <i class="fa-solid fa-house"></i> <a href="#" id="home-link">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-graduation-cap"></i> <a href="#" id="students-link">Students</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-dollar-sign"></i> <a href="#" id="payment-link">Payment</a>
+                        </li>
+                        <li><i class="fa-regular fa-bookmark"></i> <a href="#">Course</a></li>
+                        <li><i class="fa-solid fa-file-contract"></i> <a href="#">Report</a></li>
+                        <li><i class="fa-solid fa-gears"></i> <a href="#">Settings</a></li>
+                    </div>
+                    <div>
+                        <li>
+                            <a href="#">Log Out</a> <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </li>
+                    </div>
+                </ul>
+            </aside>
+            <main>
+                <header>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <div class='search-bar'>
+                        <div class="seach">
+                            <input type="search" placeholder="Search...">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        </div>
+                        <i class="fa-regular fa-bell"></i>
+                    </div>
+                </header>
+                <div class="home">
+                    <div class="main-content">
+                        <div class="card"><i class="fa-solid fa-graduation-cap stud"></i><br>
+                            <span>Students</span>
+                            <p>243</p>
+                        </div>
+                        <div class="card"><i class="fa-regular fa-bookmark course"></i><br>
+                            <span>Course</span>
+                            <p>13</p>
+                        </div>
+                        <div class="card"><i class="fa-solid fa-dollar-sign payment"></i><br>
+                            <span>Payments</span>
+                            <p><small>INR</small> 556,000</p>
+                        </div>
+                        <div class="card"><i class='fas fa-user use'></i><br>
+                            <span>Users</span>
+                            <p>3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="students" style="display: none;">
+                    <div class="address">
+                        <div class="up">
+                            <h2>Students List</h2>
+                            <div class="icons">
+                                <i class="fas fa-arrows-down-to-line"></i>
+                                <button id="addStudentButton">ADD NEW STUDENT</button>
+                            </div>
+                            <div class="data">
+                                <input type="text" placeholder="Name">
+                                <input type="email" placeholder="Email">
+                                <input type="tel" placeholder="Phone">
+                                <input type="number" placeholder="Enroll Number">
+                                <input type="text" placeholder="Date of admission" class="admission">
+                            </div>
+                        </div>
+                        <div style="overflow-x: auto;">
+                            <table id="studentsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Enroll Number</th>
+                                        <th>Date of admission</th>
+                                        <th>Edit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="payments" style="display:none;">
+                    <div class="address">
+                        <div class="up">
+                            <h2>Payment Details</h2>
+                            <div class="icons">
+                                <i class="fas fa-arrows-down-to-line"></i>
+                            </div>
+                        </div>
+                        <div style="overflow-x: auto;">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Payment Schedule</th>
+                                        <th>Bill Number</th>
+                                        <th>Amount Paid</th>
+                                        <th>Balance amount</th>
+                                        <th>Date</th>
+                                        <th>Edit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Karthi</td>
+                                        <td>First</td>
+                                        <td>00012223</td>
+                                        <td>INR 35,000</td>
+                                        <td>INR 55,000</td>
+                                        <td>08-Dec, 2021</td>
+                                        <td><i class="fas fa-eye"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Karthi</td>
+                                        <td>First</td>
+                                        <td>00012223</td>
+                                        <td>INR 35,000</td>
+                                        <td>INR 55,000</td>
+                                        <td>08-Dec, 2021</td>
+                                        <td><i class="fas fa-eye"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Karthi</td>
+                                        <td>First</td>
+                                        <td>00012223</td>
+                                        <td>INR 35,000</td>
+                                        <td>INR 55,000</td>
+                                        <td>08-Dec, 2021</td>
+                                        <td><i class="fas fa-eye"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Karthi</td>
+                                        <td>First</td>
+                                        <td>00012223</td>
+                                        <td>INR 35,000</td>
+                                        <td>INR 55,000</td>
+                                        <td>08-Dec, 2021</td>
+                                        <td><i class="fas fa-eye"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Karthi</td>
+                                        <td>First</td>
+                                        <td>00012223</td>
+                                        <td>INR 35,000</td>
+                                        <td>INR 55,000</td>
+                                        <td>08-Dec, 2021</td>
+                                        <td><i class="fas fa-eye"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Karthi</td>
+                                        <td>First</td>
+                                        <td>00012223</td>
+                                        <td>INR 35,000</td>
+                                        <td>INR 55,000</td>
+                                        <td>08-Dec, 2021</td>
+                                        <td><i class="fas fa-eye"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="main.js"></script>
+        <script src='dash.js'></script>
+    </body>
+
+</html>
