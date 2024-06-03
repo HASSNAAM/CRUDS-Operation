@@ -62,12 +62,20 @@ input {
   display: block;
   width: 100%;
   outline: none;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 input::placeholder {
   color: #cdcdcd;
   font-size: 14px;
   font-weight: 400;
   line-height: 14.63px;
+}
+input:focus {
+  border: 1px solid #feaf00;
 }
 button {
   font-size: 14px;
@@ -126,13 +134,13 @@ aside {
   gap: 10px;
 }
 .logo .img {
-  background-image: url("imges/profileImage.img.jpg");
+  background-image: url("../imges/profileImage.img.jpg");
   background-size: cover;
   width: 140px;
   height: 140px;
   border-radius: 50%;
   margin: 20px 0;
-  border: 3px solid #fff;
+  border: 5px solid #bebbbb;
 }
 .dashboard h2 {
   font-size: 17px;
@@ -187,6 +195,15 @@ header {
 }
 header i {
   color: #c4c4c4;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+header i:hover,
+header input:focus + i {
+  color: #feaf00;
 }
 .search-bar {
   display: flex;
@@ -251,6 +268,9 @@ header .search-icon {
 .active-link {
   background-color: #feaf00;
   color: #ffffff;
+}
+.active-link a{
+  color: #ffffff !important;
 }
 /* Students */
 .students {
@@ -380,7 +400,7 @@ td img {
   .data input {
     max-width: 50%;
   }
-  .main-content .card{
+  .main-content .card {
     flex: 1;
   }
 }

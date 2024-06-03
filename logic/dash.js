@@ -83,7 +83,7 @@ addStudentButton.addEventListener("click", function () {
   // Add New Table Row
   const newRow = document.createElement("tr");
   newRow.innerHTML = `
-            <td><img src="imges/profileImage.img.jpg" alt="Image"></td>
+            <td><img src="../imges/profileImage.img.jpg" alt="Image"></td>
             <td contenteditable="true">${name}</td>
             <td contenteditable="true">${email}</td>
             <td contenteditable="true">${phone}</td>
@@ -249,7 +249,7 @@ function loadTableData() {
     tableData.forEach((data) => {
       const newRow = document.createElement("tr");
       newRow.innerHTML = `
-                        <td><img src="imges/profileImage.img.jpg" alt="Image"></td>
+                        <td><img src="../imges/profileImage.img.jpg" alt="Image"></td>
                         <td contenteditable="true">${data.name}</td>
                         <td contenteditable="true">${data.email}</td>
                         <td contenteditable="true">${data.phone}</td>
